@@ -21,11 +21,12 @@ Beginning:      mov  	ax, @DATA
 				mov     ds, ax
 				mov 	al, a
 				mov 	bl, b
-				sub 	al, bl
+				sub 	al, bl			; al = al-bl
 				mov 	bl, c
-				mul     bl
+				mul     bl				; al = al*bl
 				mov 	bl, d
-				div     bl
+				div     bl				; al = al/bl
+				mov     result, al      ; Moves the results to the memory
 				mov     ah, 4Ch
 				int     21h
 
